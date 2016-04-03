@@ -14,6 +14,7 @@ body
 color: #FFFFFF;
 margin: 0;
 font-size: .9em; 
+width: 100%;
 }
 sup 
 {
@@ -57,36 +58,39 @@ em
 
 	/*border-bottom: 5px solid #E06E18;*/
 	border: 1px solid #000;	
+	padding: 2%;
 	vertical-align:bottom;
+	
 }
 .top img 
 {
-	width: 5%;
+	width: 4%;
 	margin-left: 3%;
 	display: inline-block;
 	border-radius: 10px;
 	border: 1px solid #000;
 	vertical-align:bottom;
+	padding: 0% 0 1% 1%;
 }
 .top h1 
 {	
-	width: 40%;
+	width: 35%;
 	display:inline-block;
 	font-size: 2em;
 	margin:2% 0 0 -6px;
 	border: 1px solid #000;
-	padding: 2%;
-
+	padding: 1% 1% 1% 0;
 }
 .topNav 
 {
 	display: inline-block;
-	width: 40%;
-	margin-right: 1%;
-	border: 1px solid #000;
-	float: right;
-	padding: 2%;
+	width: 50%;
 	
+	float: right;
+	padding: 2.5% 1% 0 0;
+	margin: 2% 3% 0 0;
+	vertical-align:bottom;
+	border: 1px solid #000;	
 } 
 .topNav li 
 {
@@ -94,18 +98,31 @@ em
 	/* creates 5px of padding between content and top boarder and 10px content and right border*/
 	
 	/*aligns the contet vertically*/
-	vertical-align:bottom;
+	
 	/*creates 5px of margin between top and right boarders and external elements.*/
-	margin: 6% 0 3% 9%;
+	margin: 0 0 3% 5%;
 	/*sets font size*/
 
 	border: 1px solid #000;
 	font-size: .5em;
+	text-align: right;
 	float: right;
+	width: 8%;
 }
+.topNav li.caseStudies
+{
+	width: 17%;
+}
+
+.topNav li.contact
+{
+	width: 12%;
+}
+
 .topNav li a 
 {
 	text-decoration: none;
+	float: right;
 }
 /*================================
 	Middle Section - Search Box
@@ -124,12 +141,14 @@ em
 	display: block;
   	color: #aaa;
   	width: 100%;
+
 	border: 1px solid #000;
 }	
 .search input 
 {   
 	float: right;
 	width: 25%;
+		height: 1%;
 	margin: 0 5% 0 70%;
 	background: #f0f0f0;
 	/*border-style: none;*/
@@ -138,8 +157,8 @@ em
 .search .fa-search { 
 	position: relative;
 	text-indent: 93%;
-	top: -25px;
-	left: 20px;
+	top: -20px;
+	
 	color: #aaa;	
 }
 
@@ -198,6 +217,14 @@ color: #FE7E00;
 	width: 46%;
 	height: 40px;
 }
+.buttons .leftAlt {
+	background-color: #FE7E00;
+	margin-right: 0;
+	border: 1px solid #000;
+	margin-right:7%;
+	width: 46%;
+	height: 40px;
+}
 
 .buttons .right {
 	background-color: #7ACCC8;
@@ -238,17 +265,195 @@ color: #FE7E00;
 	padding: 5%;
 }
 
-
 /*===================================
 responsice desighn
 ===================================*/
-@media (max-width: 970px)
+@media (max-width: 778px)
 {
-	body 
+	.top img
 	{
-		width: 800px;
+		width: 5%;
+	}
+	.top h1
+	{
+		width: 45%;
+	}
+	.topNav li.caseStudies
+	{
+		display: none;
 	}	
+	.buttons .right
+	{
+		display: none;
+	}
+	.topNav
+	{
+		width: 35%
+	}
+	.topNav li
+	{
+		width: 11%;
+	}
+	.topNav li.contact
+	{
+		width: 17%;
+	}
+	.search .fa-search 
+	{ 
+	top: -20px;
+	left: -5px;	
+	}
 }
+@media (max-width: 700px)
+{
+	.top img
+	{
+		width: 6%;
+	}
+}
+
+@media (max-width: 562px)
+{
+	.top img
+	{
+		width: 7%;
+	}
+	.top h1
+	{
+		width: 50%;
+	}
+	.topNav
+	{
+		width: 30%;
+	}
+	.topNav li.about
+	{
+		display: none;
+	}
+	.topNav li
+	{
+		width: 20%;
+		margin: 0 0 3% 8%;
+	}
+	.search .fa-search 
+	{ 
+	top: -20px;
+	left: -10px;	
+	}
+}
+@media (max-width: 498px)
+{
+	.top img
+	{
+		width: 8%;
+	}
+	.top h1
+	{
+		width: 55%;
+	}
+	.topNav
+	{
+		width: 25%;
+	}
+	.topNav li
+	{
+		margin: 0 0 3% 11%;
+	}
+}
+@media (max-width: 452px)
+{	
+	.search
+	{
+		float: left;
+	}
+	.search input
+	{
+		margin-left: 0;
+	}
+
+	.top img
+	{
+		display: none;
+	}
+	.top h1
+	{
+		width: 100%;
+	}
+	.topNav
+	{
+		width: 15%;
+	}
+	.topNav li
+	{
+		margin: 0 0 3% 11%;
+	}
+	.topNav
+	{
+		display: none;
+	}
+	.top
+	{
+		align-items: center !important;
+	}
+	.pitch
+	{
+		display: none;
+	}
+	.middle
+	{
+		align-items: center;
+	}
+	.middle img
+	{
+    	margin: 25%;
+	}
+	.buttons .leftAlt
+	{
+		margin: auto !important;
+	}
+}
+
+@media	(min-width: 452px)
+{
+	.buttons .leftAlt
+	{
+	display: none;	
+	}
+}
+@media	(max-width: 254px)
+{
+	.top h1
+	{
+		font-size: 1.5em;
+	}
+	.search .fa-search 
+	{ 
+	display: none;	
+	}
+
+}
+@media	(max-width: 188px)
+{
+	.top h1
+	{
+		font-size: 1em;
+	}
+
+}
+@media	(max-width: 128px)
+{
+	.top h1
+	{
+		font-size: .5em;
+	}
+	.buttons
+	{
+		font-size: .1em;
+	}
+
+}
+
+
 /* responsice pitch* 
 
 @media (max-width: 1418px){
